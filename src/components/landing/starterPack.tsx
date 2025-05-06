@@ -31,8 +31,8 @@ export function ContentSectionOne() {
               >
                 be the greatest you
               </a>
-              . Would you believe in what you believe in, if you were the only one
-              who believed it?
+              . Would you believe in what you believe in, if you were the only
+              one who believed it?
               <br />
               <br />
               We&apos;re not always in the position that we want to be at.
@@ -41,10 +41,10 @@ export function ContentSectionOne() {
               actualize our dreams.
             </Typography>
             <div className="inline-flex flex-wrap gap-3">
-              <Button variant="outlined" color="dark" size="lg">
+              <Button variant="outlined" size="lg">
                 get in touch
               </Button>
-              <Button color="dark" size="lg">our process</Button>
+              <Button size="lg">our process</Button>
             </div>
           </div>
           <img

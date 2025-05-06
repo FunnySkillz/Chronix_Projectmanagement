@@ -23,7 +23,6 @@ import {
 
 import ThemeProvider from "./theme-provider";
 
- 
 const colors = {
   blue: "bg-blue-50 text-blue-500",
   orange: "bg-orange-50 text-orange-500",
@@ -34,42 +33,51 @@ const colors = {
   cyan: "bg-cyan-50 text-cyan-500",
   pink: "bg-pink-50 text-pink-500",
 };
- 
+
 // account pages menu
 const accountItems = [
   {
     title: "Login",
-    href: "/astro-launch-ui/login"
+    href: "/astro-launch-ui/login",
   },
   {
     title: "Sign Up",
-    href: "/astro-launch-ui/signup"
-  }
+    href: "/astro-launch-ui/signup",
+  },
 ];
 
 function AccountListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
- 
+
   const triggers = {
     onMouseEnter: () => setIsMenuOpen(true),
     onMouseLeave: () => setIsMenuOpen(false),
   };
- 
+
   const renderItems = accountItems.map(({ title, href }) => (
     <a href={href} key={title}>
       <MenuItem>
-        <Typography variant="paragraph" color="blue-gray" className="mb-1 font-normal">
+        <Typography
+          variant="paragraph"
+          color="blue-gray"
+          className="mb-1 font-normal"
+        >
           {title}
         </Typography>
       </MenuItem>
     </a>
   ));
- 
+
   return (
     <React.Fragment>
       <Menu open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-normal outline-none focus:outline-none">
+          <Typography
+            as="a"
+            href="#"
+            variant="small"
+            className="font-normal outline-none focus:outline-none"
+          >
             <MenuItem
               {...triggers}
               className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
@@ -107,41 +115,50 @@ function AccountListMenu() {
 const navListMenuItems = [
   {
     title: "About Us",
-    href: "/astro-launch-ui/about"
+    href: "/astro-launch-ui/about",
   },
   {
     title: "Landing Page",
-    href: "/astro-launch-ui/landing"
+    href: "/astro-launch-ui/landing",
   },
   {
     title: "404",
-    href: "/astro-launch-ui/404"
-  }
+    href: "/astro-launch-ui/404",
+  },
 ];
- 
+
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
- 
+
   const triggers = {
     onMouseEnter: () => setIsMenuOpen(true),
     onMouseLeave: () => setIsMenuOpen(false),
   };
- 
+
   const renderItems = navListMenuItems.map(({ title, href }) => (
     <a href={href} key={title}>
       <MenuItem>
-        <Typography variant="paragraph" color="blue-gray" className="mb-1 font-normal">
+        <Typography
+          variant="paragraph"
+          color="blue-gray"
+          className="mb-1 font-normal"
+        >
           {title}
         </Typography>
       </MenuItem>
     </a>
   ));
- 
+
   return (
     <React.Fragment>
       <Menu open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-normal outline-none focus:outline-none">
+          <Typography
+            as="a"
+            href="#"
+            variant="small"
+            className="font-normal outline-none focus:outline-none"
+          >
             <MenuItem
               {...triggers}
               className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
@@ -174,7 +191,7 @@ function NavListMenu() {
     </React.Fragment>
   );
 }
- 
+
 function NavList() {
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
@@ -195,17 +212,17 @@ function NavList() {
     </List>
   );
 }
- 
+
 export default function Example() {
   const [openNav, setOpenNav] = React.useState(false);
- 
+
   React.useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
- 
+
   return (
     <ThemeProvider>
       <Navbar className="absolute mx-auto left-0 right-0 top-3 max-w-screen-xl px-4 py-2 z-10">
@@ -228,9 +245,7 @@ export default function Example() {
               </Button>
             </a>
             <a href="/astro-launch-ui/signup">
-              <Button size="sm" color="dark">
-                Sign Up
-              </Button>
+              <Button size="sm">Sign Up</Button>
             </a>
           </div>
           <IconButton
@@ -250,12 +265,12 @@ export default function Example() {
           <NavList />
           <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
             <a href="/astro-launch-ui/login">
-              <Button variant="outlined" size="sm" color="dark" fullWidth>
+              <Button variant="outlined" size="sm" fullWidth>
                 Sign In
               </Button>
             </a>
             <a href="/astro-launch-ui/signup">
-              <Button size="sm" fullWidth color="dark">
+              <Button size="sm" fullWidth>
                 Sign Up
               </Button>
             </a>

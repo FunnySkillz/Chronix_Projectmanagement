@@ -1,16 +1,10 @@
 import React from "react";
-import {
-  Button,
-  Typography,
-} from "@material-tailwind/react";
+import { Button, Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 import Navbar from "../navbar";
-import {
-  ArrowSmallRightIcon,
-} from "@heroicons/react/24/outline";
+import { ArrowSmallRightIcon } from "@heroicons/react/24/outline";
 
 export function HeroPresentation() {
- 
   return (
     <ThemeProvider>
       <Navbar />
@@ -29,7 +23,7 @@ export function HeroPresentation() {
                 variant="small"
                 className="flex items-center font-bold uppercase"
               >
-                Astro Starter Template
+                Manage your Time like a Pro!
               </Typography>
             </div>
             <Typography
@@ -37,22 +31,28 @@ export function HeroPresentation() {
               color="blue-gray"
               className="mb-8 lg:mr-32 leading-tight font-black"
             >
-              The perfect foundation for your <span className="text-blue">Astro Project</span>
+              The perfect foundation for your{" "}
+              <span className="text-blue">Company</span>
             </Typography>
             <Typography variant="lead" color="blue-gray" className="lg:pr-32">
-              AstroLaunch UI is a free template designed to be both lightweight and feature-rich. It comes packed with everything you need to get your Online Store ready in no time.
+              Vereinfachen Sie Ihre Terminplanung und steigern Sie Ihre
+              Kundenzufriedenheit mit unserer modernen Online-Terminverwaltung.
+              Perfekt für Praxen, Kanzleien, Werkstätten und viele weitere
+              Dienstleister!
             </Typography>
             <div className="mt-12 flex flex-wrap justify-center gap-3 lg:justify-start">
               <a href="#pricing">
-                <Button color="dark" className="flex items-center">
-                  Get Started
-                </Button>
+                <Button className="flex items-center">Get Started</Button>
               </a>
             </div>
           </div>
         </div>
         <div className="hidden lg:flex">
-          <img src="header.png" alt="components" className="absolute -top-10 right-0 w-1/2" />
+          <img
+            src="header.png"
+            alt="components"
+            className="absolute -top-10 right-0 w-1/2"
+          />
         </div>
       </header>
     </ThemeProvider>
