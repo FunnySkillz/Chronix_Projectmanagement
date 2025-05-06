@@ -69,12 +69,6 @@ const posts = [
     url: "https://demos.creative-tim.com/astro-launch-ui/about",
   },
   {
-    img: "signin.jpg",
-    title: "Sign In Page",
-    desc: "It's designed to provide the user with all the necessary information for a secure login.",
-    url: "https://demos.creative-tim.com/astro-launch-ui/login",
-  },
-  {
     img: "404.jpg",
     title: "404 Error Page",
     desc: "If you're looking for essential information to make a decision, our website has it all - just not on this page.",
