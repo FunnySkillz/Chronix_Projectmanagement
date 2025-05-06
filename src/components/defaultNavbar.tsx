@@ -34,18 +34,6 @@ const colors = {
   pink: "bg-pink-50 text-pink-500",
 };
 
-// account pages menu
-const accountItems = [
-  {
-    title: "Login",
-    href: "/astro-launch-ui/login",
-  },
-  {
-    title: "Sign Up",
-    href: "/astro-launch-ui/signup",
-  },
-];
-
 function AccountListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -53,20 +41,6 @@ function AccountListMenu() {
     onMouseEnter: () => setIsMenuOpen(true),
     onMouseLeave: () => setIsMenuOpen(false),
   };
-
-  const renderItems = accountItems.map(({ title, href }) => (
-    <a href={href} key={title}>
-      <MenuItem>
-        <Typography
-          variant="paragraph"
-          color="blue-gray"
-          className="mb-1 font-normal"
-        >
-          {title}
-        </Typography>
-      </MenuItem>
-    </a>
-  ));
 
   return (
     <React.Fragment>
@@ -92,21 +66,10 @@ function AccountListMenu() {
             </MenuItem>
           </Typography>
         </MenuHandler>
-        <MenuList
-          {...triggers}
-          className="hidden grid-cols-7 gap-3 overflow-visible lg:grid"
-        >
-          <ul className="col-span-12 flex w-full flex-col gap-1 outline-none focus:outline-none">
-            {renderItems}
-          </ul>
-        </MenuList>
       </Menu>
       <MenuItem className="flex items-center gap-2 text-blue-gray-900 lg:hidden">
         <Square3Stack3DIcon className="h-[18px] w-[18px]" /> Account{" "}
       </MenuItem>
-      <ul className="ml-6 flex w-full flex-col gap-1 lg:hidden">
-        {renderItems}
-      </ul>
     </React.Fragment>
   );
 }
@@ -238,16 +201,6 @@ export default function Example() {
           <div className="hidden lg:block">
             <NavList />
           </div>
-          <div className="hidden gap-2 lg:flex">
-            <a href="./login">
-              <Button variant="text" size="sm" color="blue-gray">
-                Sign In
-              </Button>
-            </a>
-            <a href="/astro-launch-ui/signup">
-              <Button size="sm">Sign Up</Button>
-            </a>
-          </div>
           <IconButton
             variant="text"
             color="blue-gray"
@@ -263,18 +216,7 @@ export default function Example() {
         </div>
         <Collapse open={openNav}>
           <NavList />
-          <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-            <a href="/astro-launch-ui/login">
-              <Button variant="outlined" size="sm" fullWidth>
-                Sign In
-              </Button>
-            </a>
-            <a href="/astro-launch-ui/signup">
-              <Button size="sm" fullWidth>
-                Sign Up
-              </Button>
-            </a>
-          </div>
+          <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden"></div>
         </Collapse>
       </Navbar>
     </ThemeProvider>

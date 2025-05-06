@@ -109,18 +109,6 @@ function ProfileMenu() {
   );
 }
 
-// account pages menu
-const accountItems = [
-  {
-    title: "Login",
-    href: "/astro-launch-ui/login",
-  },
-  {
-    title: "Sign Up",
-    href: "/astro-launch-ui/signup",
-  },
-];
-
 function AccountListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -128,20 +116,6 @@ function AccountListMenu() {
     onMouseEnter: () => setIsMenuOpen(true),
     onMouseLeave: () => setIsMenuOpen(false),
   };
-
-  const renderItems = accountItems.map(({ title, href }) => (
-    <a href={href} key={title}>
-      <MenuItem>
-        <Typography
-          variant="paragraph"
-          color="blue-gray"
-          className="mb-1 font-normal"
-        >
-          {title}
-        </Typography>
-      </MenuItem>
-    </a>
-  ));
 
   return (
     <React.Fragment>
@@ -167,21 +141,10 @@ function AccountListMenu() {
             </MenuItem>
           </Typography>
         </MenuHandler>
-        <MenuList
-          {...triggers}
-          className="hidden grid-cols-7 gap-3 overflow-visible lg:grid"
-        >
-          <ul className="col-span-12 flex w-full flex-col gap-1 outline-none focus:outline-none">
-            {renderItems}
-          </ul>
-        </MenuList>
       </Menu>
       <MenuItem className="flex items-center gap-2 text-blue-gray-900 lg:hidden">
         <Square3Stack3DIcon className="h-[18px] w-[18px]" /> Account{" "}
       </MenuItem>
-      <ul className="ml-6 flex w-full flex-col gap-1 lg:hidden">
-        {renderItems}
-      </ul>
     </React.Fragment>
   );
 }
