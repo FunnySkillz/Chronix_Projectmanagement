@@ -1,16 +1,10 @@
 import React from "react";
-import {
-  Button,
-  Typography,
-} from "@material-tailwind/react";
+import { Button, Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 import Navbar from "../navbar";
-import {
-  ArrowSmallRightIcon,
-} from "@heroicons/react/24/outline";
+import { ArrowSmallRightIcon } from "@heroicons/react/24/outline";
 
 export function HeroSectionTwo() {
- 
   return (
     <ThemeProvider>
       <Navbar />
@@ -49,7 +43,7 @@ export function HeroSectionTwo() {
               we lose family over time.
             </Typography>
             <div className="mt-12 flex flex-wrap justify-center gap-3 lg:justify-start">
-              <Button color="dark" className="flex items-center">
+              <Button className="flex items-center">
                 <img
                   src="logos/logo-ios.svg"
                   alt="ios"
@@ -57,7 +51,7 @@ export function HeroSectionTwo() {
                 />
                 Download Ios
               </Button>
-              <Button color="dark" className="flex items-center">
+              <Button className="flex items-center">
                 <img
                   src="logos/logo-android.svg"
                   alt="ios"
@@ -68,7 +62,11 @@ export function HeroSectionTwo() {
             </div>
           </div>
           <div className="hidden lg:flex">
-            <img src="https://images.unsplash.com/photo-1650615567023-0721bceeecb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80" alt="iphone" className="max-w-md rounded-3xl ml-auto" />
+            <img
+              src="https://images.unsplash.com/photo-1650615567023-0721bceeecb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
+              alt="iphone"
+              className="max-w-md rounded-3xl ml-auto"
+            />
           </div>
         </div>
       </header>

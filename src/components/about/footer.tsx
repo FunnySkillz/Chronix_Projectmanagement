@@ -1,7 +1,6 @@
 import { Typography, Input, Button } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 
-
 const links = ["Overview", "Features", "Pricing", "Careers", "Help", "Privacy"];
 const links2 = ["Terms", "Privacy", "Cookies"];
 const currentYear = new Date().getFullYear();
@@ -38,8 +37,9 @@ export function FooterOne() {
                 Stay up to date
               </Typography>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Input color="black" label="Enter your email" />
-                <Button color="dark">subscribe</Button>
+                <Input label="Enter your email" crossOrigin={undefined} />
+
+                <Button>subscribe</Button>
               </div>
             </div>
           </div>
